@@ -23,7 +23,7 @@ In terminal type in: git pull
 Hit enter
 
 7. Install cypress on your machine
-In  terminal type in: npm install cypress
+In  terminal type in: npm install cypress -g
 Hit enter
 
 8. Install xpath for cypress
