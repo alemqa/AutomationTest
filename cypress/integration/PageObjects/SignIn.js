@@ -4,7 +4,7 @@ const wrongPassword ="434322342"
 
 class signInPage {
 
-    enterEmail(signIn) {
+    enterEmailSignIn(signIn) {
         cy.get('#email')
             .should('be.visible')
             .clear()

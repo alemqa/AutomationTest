@@ -132,14 +132,6 @@ class signUpPage {
     }
 
 
-    enterEmailSignIn(signIn) {
-        cy.get('#email')
-            .should('be.visible')
-            .clear()
-            .type(usedEmail)
-            .should('have.value', usedEmail)
-    }
-
 }
 
 export default signUpPage
