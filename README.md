@@ -26,6 +26,10 @@ Hit enter
 In  terminal type in: npm install cypress
 Hit enter
 
+8. Install xpath for cypress
+In terminal type in: npm i cypress-xpath
+Hit enter
+
 YOU SHOULD BE ALL SET NOW!
 
 Running the tests:
@@ -38,14 +42,13 @@ In cypress app select the folder called 'AutomationTest', (you cloned it on your
 2. Now you should see couple of different spec files
 If you want to run the API automation, just click on API_spec.js (in top right corner, you can switch browsers)
 If you want to run the e2e test, just click on test.spec.js
+If you want to run all the integration spec files, just click on 'Run integration specs' button, in top right corner.
 
-3. If you want to run the tests via console
-Go into AutomationTest folder, right click and click on GitBash Here
-In terminal, type in: npm run test
-Wait for test to finish (both API and e2e test will run this way)
-When test run is completed, mochawesome reporting tool will activate.
-It will create .json reports for each specs and combine the into .html file.
-Now you can open AutomationTest folder, go into Cypress folder, go into reports folder, go into mochareports folder. There you will see report.html file.
-Open it with browser (Chrome) and you will see full report of the test run.
-Also if you go back into Cypress folder, you can see folder called Videos. Inside that you will have a video of the last run.
+
+Those are steps for basic users. On my machine I set up the reporting tool also, called mochawesome.
+It can generate .html reports, so the team can visualy see everything. How long did it take to run the test, on which browser did I ran it,
+what passed, what failed....etc.
+But for this if you want it to set up on your machine, contact me directly.
+
+
 
