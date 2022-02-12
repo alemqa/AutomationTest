@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-12T15:30:15.188Z",
+    "end": "2022-02-12T15:30:19.162Z",
+    "duration": 3974,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "30cc26c4-ff29-4229-8f81-e960e6e6432c",
+      "title": "",
+      "fullFile": "cypress/integration/API_spec.js",
+      "file": "cypress/integration/API_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "96d1c2b6-b151-463a-b0b0-f2db03b73e22",
+          "title": "Get API user list",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Users",
+              "fullTitle": "Get API user list Get Users",
+              "timedOut": null,
+              "duration": 234,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://reqres.in/api/users'\n}).should(response => {\n  cy.log(JSON.stringify(response.body));\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "afc3d476-5ce1-4a3a-bfa8-298d826db72b",
+              "parentUUID": "96d1c2b6-b151-463a-b0b0-f2db03b73e22",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "afc3d476-5ce1-4a3a-bfa8-298d826db72b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 234,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "9aa43998-acea-4d58-bb01-6dbdcae1ca74",
+          "title": "Register Unsuccessful",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Users",
+              "fullTitle": "Register Unsuccessful Get Users",
+              "timedOut": null,
+              "duration": 185,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://reqres.in/api/register',\n  failOnStatusCode: false,\n  body: {\n    \"email\": \"sydney@fife\"\n  }\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  expect(response.status).to.eq(400);\n});",
+              "err": {},
+              "uuid": "7d34c691-7441-4231-b798-f1c47274da49",
+              "parentUUID": "9aa43998-acea-4d58-bb01-6dbdcae1ca74",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7d34c691-7441-4231-b798-f1c47274da49"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 185,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "fe075987-fe60-49b0-91f4-abbd7f54a922",
+          "title": "Delete user",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Users",
+              "fullTitle": "Delete user Get Users",
+              "timedOut": null,
+              "duration": 180,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'DELETE',\n  url: 'https://reqres.in/api/users/2'\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  expect(response.status).to.eq(204);\n});",
+              "err": {},
+              "uuid": "665f579e-6a0d-41b6-b3f2-f30aef782ab3",
+              "parentUUID": "fe075987-fe60-49b0-91f4-abbd7f54a922",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "665f579e-6a0d-41b6-b3f2-f30aef782ab3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 180,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "771193c9-dfec-488d-9230-6d7c7a9092a8",
+          "title": "Delayed Response",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Users",
+              "fullTitle": "Delayed Response Get Users",
+              "timedOut": null,
+              "duration": 3201,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://reqres.in/api/users?delay=3'\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "a5f9db52-0657-4cdb-8aa9-2c9359b5eb0f",
+              "parentUUID": "771193c9-dfec-488d-9230-6d7c7a9092a8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a5f9db52-0657-4cdb-8aa9-2c9359b5eb0f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3201,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
