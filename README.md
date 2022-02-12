@@ -23,6 +23,7 @@ In terminal type in: git pull
 Hit enter
 
 7. Install cypress on your machine
+Open AutomationTest folder, inside of the folder do right click and click on GitBash here
 In  terminal type in: npm install cypress -g
 Hit enter
 
