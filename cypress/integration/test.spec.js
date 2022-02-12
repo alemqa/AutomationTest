@@ -23,7 +23,7 @@ describe("Maximise browser window and navigate to 'automationpractice.com' URL",
 
 
     it("Visits the AutomationPractice web page", function() {
-        cy.viewport(1920, 1080) //takodjer je ovo definisano u cypress.json fileu (ali ostavio sam ovo ovdje takodjer)
+        cy.viewport(1920, 1080) 
         signUp.navigate()
 
     });
