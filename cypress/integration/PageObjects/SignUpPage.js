@@ -132,7 +132,7 @@ class signUpPage {
     }
 
 
-    enterEmail(signIn) {
+    enterEmailSignIn(signIn) {
         cy.get('#email')
             .should('be.visible')
             .clear()

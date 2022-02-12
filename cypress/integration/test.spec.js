@@ -218,7 +218,7 @@ describe("User should not be able to Sign In with invalid Password", function() 
     });
 
     it("User enters Email Address in Sign In form", function() {
-        signIn.enterEmail()
+        signIn.enterEmailSignIn()
     })
 
     it("User enters Wrong Password in Sign In form", function() {
