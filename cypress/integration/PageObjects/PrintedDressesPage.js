@@ -17,6 +17,18 @@ class PrintedDressesPage {
     }
 
     inputResultsIntoTXTfile(printedDresses) {
+        cy.writeFile('cypress/SearchResult.txt', '')
+        cy.xpath('//*[@itemprop="name"]').children('.product-name').should('have.length', 5)
+        .each(function($el, index, $listOfElements){
+            cy.log($el.text())
+            .then(($temp) => {
+                cy.writeFile('cypress/SearchResult.txt', $el.text(), {flag: 'a+'})
+            })
+                   
+        })
+    }
+/*
+    inputResultsIntoTXTfile(printedDresses) {
         cy.xpath('(//*[@itemprop="name"])[1]').then(($temp)=>{
         const txt = $temp.text()
         cy.writeFile('cypress/SearchResult.txt', txt)
@@ -42,7 +54,7 @@ class PrintedDressesPage {
         cy.writeFile('cypress/SearchResult.txt', txt, {flag: 'a+'})
         })
     }
-	
+*/	
 
 }
 
